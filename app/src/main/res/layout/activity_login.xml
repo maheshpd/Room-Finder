@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".Register">
+    tools:context=".activity.Login">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -31,70 +31,10 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="REGISTER"
+            android:text="LOGIN"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/roboto_medium"
-            android:text="NAME"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:orientation="horizontal"
-            android:weightSum="1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2">
-
-            <EditText
-                android:id="@+id/first_name_edt"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_weight="0.5"
-                android:background="@drawable/editstrokebg"
-                android:drawableLeft="@drawable/ic_person"
-                android:drawablePadding="7dp"
-                android:ems="10"
-                android:hint="First Name"
-                android:inputType="textPersonName"
-                android:paddingLeft="5dp"
-                android:paddingEnd="5dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white" />
-
-            <EditText
-                android:id="@+id/editText3"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="0.5"
-                android:background="@drawable/editstrokebg"
-                android:ems="10"
-                android:hint="Last name"
-                android:inputType="textPersonName"
-                android:paddingStart="5dp"
-                android:paddingLeft="5dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white" />
-        </LinearLayout>
 
         <TextView
             android:id="@+id/textView3"
@@ -106,7 +46,7 @@
             android:text="EMAIL"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <EditText
             android:id="@+id/email_edit"
@@ -171,19 +111,21 @@
                 android:paddingLeft="5dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
-        <CheckBox
-            android:id="@+id/checkBox"
+        <Button
+            android:id="@+id/forgot_password"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
-            android:buttonTint="@color/white"
-            android:text="By registering you are agreeing to \n our Privacy Policy &amp; Terms of Use"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Forgot Password?"
+            android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
         <Button
@@ -194,11 +136,11 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/btn_design"
-            android:text="Register"
+            android:text="LOGIN"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+            app:layout_constraintTop_toBottomOf="@+id/forgot_password" />
 
         <View
             android:id="@+id/view"
@@ -229,7 +171,6 @@
             android:layout_height="1dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="24dp"
-
             android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="parent"
@@ -262,7 +203,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:fontFamily="@font/roboto_regular"
-            android:text="Already have an account? LOGIN"
+            android:text="Already have an account? REGISTER"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="13sp"
@@ -271,6 +212,5 @@
             app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.core.widget.NestedScrollView>
