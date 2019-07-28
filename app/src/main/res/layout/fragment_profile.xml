@@ -22,8 +22,7 @@
                 android:layout_height="80dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
-                android:background="@color/colorPrimary"
-                android:src="@drawable/man"
+                android:src="@drawable/girls"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
