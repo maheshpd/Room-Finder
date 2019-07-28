@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Room Finder</string>
+
+    <string-array name="occupation">
+        <item>Student</item>
+        <item>Engineers</item>
+        <item>Student</item>
+        <item>Staf</item>
+    </string-array>
 </resources>
