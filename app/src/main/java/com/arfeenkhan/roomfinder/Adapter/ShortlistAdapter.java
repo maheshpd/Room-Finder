@@ -2,6 +2,7 @@ package com.arfeenkhan.roomfinder.Adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,10 +41,13 @@ public class ShortlistAdapter extends RecyclerView.Adapter<ShortlistAdapter.MySh
     public void onBindViewHolder(@NonNull MyShortListView holder, final int position) {
         ShortlistModel shortlistModel = shortlistlist.get(position);
 
+            String bed = "<font color='#B6B3B3'> / Bed </font>";
+
+
            holder.buildingname.setText(shortlistModel.getBuildingname());
            holder.availableornot.setText(shortlistModel.getAvailable());
            holder.buildingtype.setText(shortlistModel.getBuidlingtype() +"\n Apartment");
-           holder.roomrate.setText("\u20B9 " +shortlistModel.getBedrate() + new StringBuilder("/ Bed"));
+           holder.roomrate.setText("\u20B9 " +shortlistModel.getBedrate() + Html.fromHtml(bed));
 
            holder.book_btn.setOnClickListener(new View.OnClickListener() {
                @Override
