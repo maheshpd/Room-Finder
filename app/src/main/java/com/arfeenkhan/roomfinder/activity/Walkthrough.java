@@ -80,6 +80,7 @@ public class Walkthrough extends AppCompatActivity implements View.OnClickListen
                         public void onClick(View view) {
 
                             loadLoginActivity();
+                            finish();
 
                         }
                     });
@@ -134,6 +135,7 @@ public class Walkthrough extends AppCompatActivity implements View.OnClickListen
                 viewPager.setCurrentItem(next_slider);
             } else {
                 loadLoginActivity();
+                finish();
             }
 
         } else if (id == R.id.prevBtn) {
